@@ -25,4 +25,12 @@ public class employetest {
         e.nouvelle_annee();
         assertEquals(e.get_salaire(),1520);
     }
+
+    @Test
+    public void testCalculSalaire(){
+        employe e= new employe(0);
+        e.set_anciennete(10);
+        e.set_salaire(e.calcul_salaire());
+        assertEquals(e.get_salaire(),1700);
+    }
 }
